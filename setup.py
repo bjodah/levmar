@@ -7,16 +7,13 @@ import shutil
 import platform
 import warnings
 from glob import glob
-
-from setuptools import Extension, find_packages, setup
-
+from setuptools import Extension, setup
 from setuptools import dist
-dist.Distribution().fetch_build_eggs(['Cython>=0.15.1', 'numpy>=1.10'])
-
 from Cython.Build import cythonize
 import numpy as np
 
 
+dist.Distribution().fetch_build_eggs(['Cython>=0.15.1', 'numpy>=1.10'])
 pkg_name = 'levmar'
 url = 'https://github.com/bjodah/' + pkg_name
 license = 'GNU General Public Licence v2'  # Takeshi Kanmae's wrapper code has the MIT license
@@ -31,8 +28,10 @@ levmar_sources = [
     'levmar/levmar-2.6/lmbleic.c'
 ]
 
+
 def _path_under_setup(*args):
-    return os.path.join(os.path.dirname(__file__), *args)
+    return os.path.join(*args)
+
 
 release_py_path = _path_under_setup(pkg_name, '_release.py')
 config_py_path = _path_under_setup(pkg_name, '_config.py')
@@ -81,12 +80,7 @@ classifiers = [
     'Intended Audience :: Science/Research',
     'Topic :: Scientific/Engineering',
     'Topic :: Scientific/Engineering :: Mathematics',
-    'Programming Language :: Python',
-    'Programming Language :: Python :: 2',
-    'Programming Language :: Python :: 2.7',
     'Programming Language :: Python :: 3',
-    'Programming Language :: Python :: 3.4',
-    'Programming Language :: Python :: 3.5',
     'License :: OSI Approved :: MIT License',
 ]
 
