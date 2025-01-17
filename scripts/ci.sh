@@ -14,4 +14,4 @@ $PYTHON setup.py sdist
 git archive -o /tmp/$PKG_NAME.zip HEAD
 $PYTHON -m pip install --force-reinstall /tmp/$PKG_NAME.zip
 ( cd /; python3 -c "from ${PKG_NAME} import __version__; assert len(__version__.split('.')) >= 2" )
-[ ! grep "DO-NOT-MERGE!" -R . --exclude ci.sh ]
+! grep "DO-NOT-MERGE!" -R . --exclude ci.sh
