@@ -4,6 +4,8 @@ include LICENSE.txt
 
 include levmar/levmar-2.6/*.c
 include levmar/levmar-2.6/*.h
+include levmar/*.pxd
+include levmar/_levmar.pyx
 prune levmar/levmar-2.6/matlab
 
 global-exclude .DS_Store
