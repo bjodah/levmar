@@ -49,7 +49,7 @@ if len(sys.argv) > 1 and '--help' not in sys.argv[1:] and sys.argv[1] not in (
                              [os.path.join('levmar', '_levmar' + ext)] + levmar_sources)]
     if USE_CYTHON:
         from Cython.Build import cythonize
-        ext_modules = cythonize(ext_modules)
+        ext_modules = cythonize(ext_modules, include_path=['levmar/'])
     ext_modules[0].include_dirs = ['levmar/levmar-2.6', np.get_include()]
     if env['LAPACK']:
         ext_modules[0].libraries += [env['LAPACK']]

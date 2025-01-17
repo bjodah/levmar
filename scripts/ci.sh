@@ -4,6 +4,7 @@ env_path=$(compgen -G /opt-3/cpython-v3.*-apt-deb/bin)
 if [ -e $env_path/activate ]; then
    source $env_path/activate
 fi
+set -euxo pipefail
 PYTHON=python
 $PYTHON setup.py sdist
 ( cd dist/; $PYTHON -m pip install $PKG_NAME-$($PYTHON ../setup.py --version).tar.gz )
