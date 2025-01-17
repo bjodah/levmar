@@ -6,15 +6,11 @@ Python binding to the levmar library using Cython.
 from __future__ import (absolute_import, division, print_function)
 
 
-from numpy.testing import Tester as __Tester
 from . import _levmar
 
 
 from ._release import __version__
 
-
-# Add test function to the package.
-test = __Tester().test
 
 
 def levmar(func, p0, y, args=(), jacf=None,
