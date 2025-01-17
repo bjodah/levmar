@@ -8,4 +8,4 @@ steps:
       - PYTHONMALLOC=malloc
     commands:
       - ./scripts/ci.sh ${CI_REPO_NAME}
-      - ./scripts/prepare_deploy.sh
+      # - ./scripts/prepare_deploy.sh
