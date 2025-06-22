@@ -197,7 +197,7 @@ def levmar(func, p, x, args, jacf,
         double c_info[LM_INFO_SZ]
         _LMFunc lm_func
 
-    p_ = cnp.PyArray_FROMANY(p, cnp.NPY_DOUBLE, 1, 1, cnp.NPY_ENSURECOPY)
+    p_ = cnp.PyArray_FROMANY(p, cnp.NPY_DOUBLE, 1, 1, cnp.NPY_ARRAY_ENSURECOPY)
     x_ = cnp.PyArray_ContiguousFromAny(x, cnp.NPY_DOUBLE, 1, 1)
     if p_.ndim != 1:
         raise ValueError('p must be a 1d array-like')
@@ -261,7 +261,7 @@ def levmar_bc(func, p, x, bc, args, jacf,
         double c_info[LM_INFO_SZ]
         _LMFunc lm_func
 
-    p_ = cnp.PyArray_FROMANY(p, cnp.NPY_DOUBLE, 1, 1, cnp.NPY_ENSURECOPY)
+    p_ = cnp.PyArray_FROMANY(p, cnp.NPY_DOUBLE, 1, 1, cnp.NPY_ARRAY_ENSURECOPY)
     x_ = cnp.PyArray_ContiguousFromAny(x, cnp.NPY_DOUBLE, 1, 1)
     if p_.ndim != 1:
         raise ValueError('p must be a 1d array-like')
@@ -329,7 +329,7 @@ def levmar_lec(func, p, x, lec, args, jacf,
         double c_info[LM_INFO_SZ]
         _LMFunc lm_func
 
-    p_ = cnp.PyArray_FROMANY(p, cnp.NPY_DOUBLE, 1, 1, cnp.NPY_ENSURECOPY)
+    p_ = cnp.PyArray_FROMANY(p, cnp.NPY_DOUBLE, 1, 1, cnp.NPY_ARRAY_ENSURECOPY)
     x_ = cnp.PyArray_ContiguousFromAny(x, cnp.NPY_DOUBLE, 1, 1)
     if p_.ndim != 1:
         raise ValueError('p must be a 1d array-like')
@@ -397,7 +397,7 @@ def levmar_blec(func, p, x, bc, lec, args, jacf,
         double c_info[LM_INFO_SZ]
         _LMFunc lm_func
 
-    p_ = cnp.PyArray_FROMANY(p, cnp.NPY_DOUBLE, 1, 1, cnp.NPY_ENSURECOPY)
+    p_ = cnp.PyArray_FROMANY(p, cnp.NPY_DOUBLE, 1, 1, cnp.NPY_ARRAY_ENSURECOPY)
     x_ = cnp.PyArray_ContiguousFromAny(x, cnp.NPY_DOUBLE, 1, 1)
     if p_.ndim != 1:
         raise ValueError('p must be a 1d array-like')
@@ -468,7 +468,7 @@ def levmar_bleic(func, p, x, bc, lec, lic, args, jacf,
         double c_info[LM_INFO_SZ]
         _LMFunc lm_func
 
-    p_ = cnp.PyArray_FROMANY(p, cnp.NPY_DOUBLE, 1, 1, cnp.NPY_ENSURECOPY)
+    p_ = cnp.PyArray_FROMANY(p, cnp.NPY_DOUBLE, 1, 1, cnp.NPY_ARRAY_ENSURECOPY)
     x_ = cnp.PyArray_ContiguousFromAny(x, cnp.NPY_DOUBLE, 1, 1)
     if p_.ndim != 1:
         raise ValueError('p must be a 1d array-like')
@@ -542,7 +542,7 @@ def levmar_blic(func, p, x, bc, lic, args, jacf,
         double c_info[LM_INFO_SZ]
         _LMFunc lm_func
 
-    p_ = cnp.PyArray_FROMANY(p, cnp.NPY_DOUBLE, 1, 1, cnp.NPY_ENSURECOPY)
+    p_ = cnp.PyArray_FROMANY(p, cnp.NPY_DOUBLE, 1, 1, cnp.NPY_ARRAY_ENSURECOPY)
     x_ = cnp.PyArray_ContiguousFromAny(x, cnp.NPY_DOUBLE, 1, 1)
     if p_.ndim != 1:
         raise ValueError('p must be a 1d array-like')
@@ -613,7 +613,7 @@ def levmar_leic(func, p, x, lec, lic, args, jacf,
         double c_info[LM_INFO_SZ]
         _LMFunc lm_func
 
-    p_ = cnp.PyArray_FROMANY(p, cnp.NPY_DOUBLE, 1, 1, cnp.NPY_ENSURECOPY)
+    p_ = cnp.PyArray_FROMANY(p, cnp.NPY_DOUBLE, 1, 1, cnp.NPY_ARRAY_ENSURECOPY)
     x_ = cnp.PyArray_ContiguousFromAny(x, cnp.NPY_DOUBLE, 1, 1)
     if p_.ndim != 1:
         raise ValueError('p must be a 1d array-like')
@@ -684,7 +684,7 @@ def levmar_lic(func, p, x, lic, args, jacf,
         double c_info[LM_INFO_SZ]
         _LMFunc lm_func
 
-    p_ = cnp.PyArray_FROMANY(p, cnp.NPY_DOUBLE, 1, 1, cnp.NPY_ENSURECOPY)
+    p_ = cnp.PyArray_FROMANY(p, cnp.NPY_DOUBLE, 1, 1, cnp.NPY_ARRAY_ENSURECOPY)
     x_ = cnp.PyArray_ContiguousFromAny(x, cnp.NPY_DOUBLE, 1, 1)
     if p_.ndim != 1:
         raise ValueError('p must be a 1d array-like')
